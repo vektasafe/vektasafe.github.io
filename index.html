@@ -148,6 +148,7 @@
     .service-card::before { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--green),var(--green2)); transform:scaleX(0); transform-origin:left; transition:transform 0.4s cubic-bezier(.16,1,.3,1); }
     .service-card:hover::before { transform:scaleX(1); }
     .service-card:hover { background:rgba(26,107,60,0.06); }
+    .service-card--wide { grid-column:span 2; }
     .service-num { font-family:'Syne',sans-serif; font-size:0.65rem; letter-spacing:0.2em; color:var(--green2); opacity:0.6; }
     .service-title { font-family:'Syne',sans-serif; font-weight:700; font-size:1rem; letter-spacing:-0.01em; color:var(--fg); }
     .service-desc { font-size:0.82rem; color:var(--service-desc-col); line-height:1.7; flex:1; }
@@ -242,6 +243,7 @@
       section { padding:3rem 1.2rem; }
       #about,#innovation,#currently,#contact { padding:3rem 1.2rem; }
       .services-grid { grid-template-columns:1fr; }
+      .service-card--wide { grid-column:span 1; }
       .writing-grid { grid-template-columns:1fr; }
       .currently-grid { grid-template-columns:1fr; }
       .idea-row { grid-template-columns:40px 1fr; grid-template-rows:auto auto; }
@@ -373,7 +375,7 @@
         <p class="service-desc">Analysis of DeFi protocol risk, tokenised asset security, on-chain market exposure, and financial attack surface. Covers oracle manipulation, liquidity pool risk, stablecoin depeg exposure, and regulatory risk. Delivered as a research report.</p>
         <a href="#contact" class="service-cta">Enquire</a>
       </div>
-      <div class="service-card" style="grid-column:span 2;">
+      <div class="service-card service-card--wide">
         <div class="service-num">05</div>
         <div class="service-title">Web Development</div>
         <p class="service-desc">Frontend and full-stack web development for protocols, startups, and individual clients. Clean, responsive, performance-focused builds. Portfolio sites, product landing pages, dashboards, and Web3-integrated frontends. Delivered with full source code and documentation.</p>
